@@ -1,40 +1,37 @@
 import React, { useState, useCallback } from 'react'
 import Card from './Card'
 import update from 'immutability-helper'
-const style = {
-    width: 400,
-}
 const Container = () => {
     {
         const [cards, setCards] = useState([
             {
                 id: 1,
-                text: 'Write a cool JS library',
+                text: 'You can write anything here',
             },
             {
                 id: 2,
-                text: 'Make it generic enough',
+                text: 'You can write anything here',
             },
             {
                 id: 3,
-                text: 'Write README',
+                text: 'You can write anything here',
             },
             {
                 id: 4,
-                text: 'Create some examples',
+                text: 'You can write anything here',
             },
             {
                 id: 5,
                 text:
-                    'Spam in Twitter and IRC to promote it (note that this element is taller than the others)',
+                    'You can write anything here',
             },
             {
                 id: 6,
-                text: '???',
+                text: 'You can write anything here',
             },
             {
                 id: 7,
-                text: 'PROFIT',
+                text: 'You can write anything here',
             },
         ])
         const moveCard = useCallback(
@@ -60,9 +57,13 @@ const Container = () => {
             )
         }
         return (
-            <>
-                <div style={style}>{cards.map((card, i) => renderCard(card, i))}</div>
-            </>
+            <div className="space-y-36">
+            <h1 className="text-center text-purple-800 font-bold text-4xl">Sample Drag and drop</h1>
+                <div className="flex flex-col justify-center  items-center space-y-5" >
+
+                    {cards.map((card, i) => renderCard(card, i))}
+                </div>
+            </div>
         )
     }
 }

@@ -35,12 +35,12 @@ const Card = ({ id, text, index, moveCard }) => {
 	drag(drop(ref))
 	return (
 		<>
-			<div style={{ border: `1px solid ${isOver ? "blue" : "transparent"}` }} />
-			<div ref={ref} style={{ ...style }}>
+			{/* <div style={{ border: `1px solid ${isOver ? "blue" : "transparent"}` }} /> */}
+			<div ref={ref} className="bg-white shadow-2xl w-1/2 border-2 px-3 py-2">
 				<CKEditor
 					editor={InlineEditor}
 					data={text}
-					onChange={console.log}
+					className="w-full"
 				/>
 			</div>
 
